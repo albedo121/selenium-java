@@ -1,11 +1,10 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -26,6 +25,10 @@ public class Assignment3 {
         driver.manage().window().maximize();        //Maximize window
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));  //Implicit wait of 10s
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); //Explicit wait of 10s
+        Wait<WebDriver> fwait = new FluentWait<>(driver)   //Fluent wait of 10s with polling of 2s
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(2))
+                .ignoring(NoSuchElementException.class);
 
         //BEGIN SCRIPT FROM HERE---------------------------------------------------
         //Define global variables here
