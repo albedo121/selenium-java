@@ -21,12 +21,12 @@ public class Action {
 
         driver.get(url);  //Navigate to site
 
-        //WebElement NavBar = driver.findElement(By.cssSelector("span[class='nav-line-2 ']"));
-        //action.moveToElement(NavBar).build().perform();  //Hover to username in navbar
-
+        WebElement NavBar = driver.findElement(By.cssSelector("span[class='nav-line-2 ']"));
         WebElement SearchBox = driver.findElement(By.id("twotabsearchtextbox"));
-        //action.moveToElement(SearchBox).click().keyDown(Keys.LEFT_SHIFT).sendKeys("tp link archer ax10");
-        action.click(SearchBox).keyDown(Keys.LEFT_SHIFT).sendKeys("tp link archer ax10");
+
+        action.moveToElement(NavBar).build().perform();  //Hover to username in navbar
+        action.moveToElement(SearchBox).click().keyDown(Keys.LEFT_SHIFT).sendKeys("tp link archer ax10").build().perform();
+
 
 
 
