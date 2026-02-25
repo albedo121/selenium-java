@@ -1,4 +1,4 @@
-//Go to mentioned url. From table - "Web Table Example" display no of rows, columns and print the 2nd row content
+package Assignments;//Go to mentioned url. From table - "Web Table Example" display no of rows, columns and print the 2nd row content
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
