@@ -1,3 +1,5 @@
+package learning;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +21,7 @@ public class scope {
         String url = "https://rahulshettyacademy.com/AutomationPractice/";
         driver.get(url);
 
-        WebElement FooterSection= driver.findElement(By.id("gf-BIG"));  //Create footer scope
+        WebElement FooterSection= driver.findElement(By.id("gf-BIG"));  //Create footer learning.scope
         System.out.println(FooterSection.findElements(By.tagName("a")).size());  //Find total links in footer
 
         WebElement column1 = FooterSection.findElement(By.xpath("//table/tbody//tr//td[1]/ul"));  //Find column1

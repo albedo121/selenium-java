@@ -1,4 +1,4 @@
-//JS executor
+package learning;//JS executor
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -21,10 +21,10 @@ public class scroll {
         String url = "https://rahulshettyacademy.com/AutomationPractice/";
         driver.get(url);
 
-        //Execute JS code in browser to scroll
+        //Execute JS code in browser to learning.scroll
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");  //Scroll down to table
-        Thread.sleep(1000);  //Just a small delay to observe the scroll happening
+        Thread.sleep(1000);  //Just a small delay to observe the learning.scroll happening
         js.executeScript("document.querySelector('.tableFixHead').scrollTop=500");  //Scroll down in table by 500px until end
 
         //Get all values and sum it up
